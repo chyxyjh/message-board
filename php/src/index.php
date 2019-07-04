@@ -1,4 +1,5 @@
 <?php 
+header("Access-Control-Allow-Origin: *");//允许所有地址跨域请求
 use \Psr\Http\Message\ServerRequestInterface as Request;  
 use \Psr\Http\Message\ResponseInterface as Response;  
   
