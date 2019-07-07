@@ -16,7 +16,7 @@ $app->get('/', function ($request, $response, $args) {
 	$new_response = $response->withJson($http_response->toArray());
 	return $new_response;  
 }); 
-$app->put('/', function ($request, $response, $args) {  
+$app->post('/', function ($request, $response, $args) {  
 	$parsed_body = $request->getParsedBody();
 	add_message($parsed_body['time'], $parsed_body['author'], $parsed_body['content']);
 	$new_response = $response->withJson((new HttpResponse(null))->toArray());
